@@ -5,7 +5,9 @@ There are two folders, one for Images and one for Metadata. The images are all e
 
 The images are digitised versions of forms submitted to the Stationer's Company in the first quarter of 1883 to register the copyright of photographs or other artworks. Generally, a form is filled in with a description of the photography/art and details of the Author and Owner of the Copyright. A copy of the copyrighted image is attached to the form. In most cases, therefore, there are two digitised versions of each form - one with the image visible, and another with it folded out the way so that the details of the form are visible. This is not always the case.
 
-The metadata folder contains two files. The larger .zip file contains 275 json files derived from the The National Archives' Discovery catalogue. The COPY 1 collection can be viewed in its entirety at this link: https://discovery.nationalarchives.gov.uk/results/r?_q=copy+1&_hb=tna&_d=COPY&Refine+departments=Refine
+The metadata folder contains three files. The larger copy1_catalogue.zip file contains 275 json files derived from the The National Archives' Discovery catalogue. A tabular (tab separated) version of this data is also available in the copy1_catalogue_tsv.zip file.
+
+The COPY 1 collection can be viewed in its entirety at this link: https://discovery.nationalarchives.gov.uk/results/r?_q=copy+1&_hb=tna&_d=COPY&Refine+departments=Refine
 
 An example of a single catalogue record can be found here: https://discovery.nationalarchives.gov.uk/details/r/C9082740
 
