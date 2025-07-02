@@ -1,7 +1,7 @@
 # Collaborative Digital Exploration: exploring the copyright world of early photography
 
-On 27-28th January The National Archives organised the hybrid “Collaborative Digital Exploration: exploring the copyright world of early photography” hackathon.
-As we outlined in this blog, the idea of the hackathon was born out of the desire to work collaboratively with the COPY 1 metadata. We were interested in identifying potential new ways of processing, enriching and/or visualizing the metadata, but also to try to test new hybrid collaborative ways of working.
+On 27-28th January 2025, The National Archives organised the hybrid “Collaborative Digital Exploration: exploring the copyright world of early photography” hackathon.
+As we outlined in [this blog](https://blog.nationalarchives.gov.uk/exploring-early-photography-through-collaborative-digital-experimentation/), the idea of the hackathon was born out of the desire to work collaboratively with the COPY 1 metadata. We were interested in identifying potential new ways of processing, enriching and/or visualizing the metadata, but also to try to test new hybrid collaborative ways of working.
 To this end we borrowed the format of the hackathon from the world of software development, and we adapted it to the research context. Since we wanted to approach the collection interdisciplinarily, intersecting for example expertise in copyright law and history with digital humanities, we sent out a call to attract participants with different backgrounds. We kept the technical requirements to the minimum and asked applicants to articulate their interest in the hackathon as well as the reason why it resonated or was relevant to past or present work and research experience.
 What follows is a brief outline of ideas explored during the hackathon, compiled with the help of the participants themselves.
  
@@ -18,8 +18,9 @@ Using a mix of natural language processing (NLP) techniques, regular expressions
 The open linked data database of WikiData opens up possibilities as it connects with other GLAM institutions authority control identifiers, having potential to make subjects and objects in this collection more discoverable to researchers and the general public worldwide, while also providing a potential way for reparative metadata enrichment.
 We saw evidence that off-the-shelf large language models (LLM) perform impressively on the WikiData QID matching task, suggesting that they may replace dedicated NLP tools in the near future. 
 
-![image](https://github.com/user-attachments/assets/137d9603-e5f7-4ec7-82a7-0a09fae76f8b)
-Figure 1. COPY 1/1/34 Metadata
+<kbd ><img src="https://github.com/user-attachments/assets/137d9603-e5f7-4ec7-82a7-0a09fae76f8b" width="600" border="2px"></kbd><br />
+_Figure 1. COPY 1/1/34 Metadata_
+
 As an example, the description of COPY 1/2/34 reads as “Photograph of African Princess”. While the Python packages were unable to suggest the correct WikiData ID, ChatGPT had no problem identifying this historical figure as Sara Forbes Bonetta, likely incorporating the contextual semantic information of ‘African Princess’.
 As an attempt towards reparative metadata approaches, we uncovered the identities of numerous other prominent figures from African and Asian regions depicted in the archive, such as Ethiopian royal Dejatch Alamayou, and Chung Mow, a Chinese circus performer.
 
@@ -28,14 +29,14 @@ As an attempt towards reparative metadata approaches, we uncovered the identitie
 Building on the work done extracting personal names and connecting to WikiData IDs, we developed the prototype of a web based interface to view and search results from WikiData using the gathered Wiki IDs. 
 This is available to view at: https://tna-named-persons-2.glitch.me/ 
 
-![image](https://github.com/user-attachments/assets/7cf61f04-5f77-4a5e-a300-417cbd79089e)
-Figure 2. Screenshot of web interface
+<kbd><img src="https://github.com/user-attachments/assets/7cf61f04-5f77-4a5e-a300-417cbd79089e" width="600" border="2px"></kbd><br />
+_Figure 2. Screenshot of web interface_
 
 ### Semantic Classification
 Finally, we tried to investigate the semantic categories of general word tokens in the descriptions using the rule-based PyMUSAS semantic tagger. PyMUSAS identified the following words in its ‘Drinks’ category, and perhaps unsurprisingly for a largely Victorian archive, the most frequently mentioned drink is tea.
 
-![image](https://github.com/user-attachments/assets/4e42abf5-ed5f-4816-ada3-32cb504f63d3)
-Figure 3. Drinks named in 131,563 Stationer's Company copyright registration forms, as classified by PyMUSAS. 
+<kbd><img src="https://github.com/user-attachments/assets/4e42abf5-ed5f-4816-ada3-32cb504f63d3" width="600" border="2px"></kbd><br />
+_Figure 3. Drinks named in 131,563 Stationer's Company copyright registration forms, as classified by PyMUSAS._
 
 **Methods**: 
 Name Entity Extraction:  Python NLP package spaCy, regular expressions;
@@ -67,8 +68,8 @@ I.	Linking to Wikidata Gazetteers: We experimented with extracting place names f
 II.	Tracking Photograph Movement: Using R for data cleaning and ArcGIS for visualization, we explored the copyright owner and author fields to identify movement patterns of photographs from of creation to registration. 
 III.	Country Identification in Descriptions: With OpenRefine, we worked on cleaning description fields to accurately extract country-level locations for improved geocoding.
 
-![image](https://github.com/user-attachments/assets/5e82567c-c1e8-4a09-8c1b-1842d3bbf4b8)
-Fig 4. Preliminary map of copyright owners vs. authors from COPY 1. Link to resource: https://www.arcgis.com/apps/mapviewer/index.html?webmap=629efa22176344ac920ee336c08d97df 
+<kbd><img src="https://github.com/user-attachments/assets/5e82567c-c1e8-4a09-8c1b-1842d3bbf4b8" width="600" border="2px"></kbd><br />
+_Fig 4. Preliminary map of copyright owners vs. authors from COPY 1._ [Link to resource](https://www.arcgis.com/apps/mapviewer/index.html?webmap=629efa22176344ac920ee336c08d97df_)
 
 **Methods**:
 Name Entity Extraction: Python (spacy);
@@ -91,9 +92,11 @@ We encountered challenges with the accuracy and scalability of automated geocodi
 **Experiment**:
 Our team experimented with leveraging Natural Language Processing to analyse the archive's descriptions. The experiment aimed to discover hidden patterns and connections within the archives, which can potentially enhance accessibility to the art collection for researchers, curators, and the public. 
 
-![image](https://github.com/user-attachments/assets/ab75b001-564d-4cf2-abeb-1b428174fb81)
-![image](https://github.com/user-attachments/assets/c4a8019d-d1b8-4010-9ecc-28b13eec7472)
-Figure 5 and 6. Examples of queries using Google NotebookLM   
+
+<kbd><img src="https://github.com/user-attachments/assets/ab75b001-564d-4cf2-abeb-1b428174fb81" width="600" border="2px"></kbd><br />
+
+<kbd><img src="https://github.com/user-attachments/assets/c4a8019d-d1b8-4010-9ecc-28b13eec7472" width="600" border="2px"></kbd><br />
+_Figure 5 and 6. Examples of queries using Google NotebookLM_
  
 **Methods**: 
 Thematic classification: Google NotebookLM; 
@@ -115,8 +118,8 @@ The main challenge in this experiment concerns the limitations of NLP algorithms
 **Experiment**: 
 Our team wanted to test if it is possible to  generate rich descriptive information from images at scale, using off-the-shelf ML/AI tools. The resulting enhanced data will aid pattern finding and inspire further research. We also tested the creation of keywords, asking the tools to create keywords from the generated descriptions.
 
-![image](https://github.com/user-attachments/assets/25c2f9db-8cd2-4d77-aa6e-2545b68bac80)
-Figure 7: COPY 1/60/57 with description generated by Gemini. Original description: 'Photograph of frost scene - trees with railings from foreground to back'.
+<kbd><img src="https://github.com/user-attachments/assets/25c2f9db-8cd2-4d77-aa6e-2545b68bac80" width="600" border="2px"></kbd><br />
+_Figure 7: COPY 1/60/57 with description generated by Gemini. Original description: 'Photograph of frost scene - trees with railings from foreground to back'._
 
 **Methods**: 
 We trialled a range of off-the-shelf AI tools on four different images to identify the most promising and accessible ones. We created a Miro board taking notes of which ones were accessible and which ones did not provide answers at all.
@@ -149,8 +152,8 @@ In an era where digital collections are expanding rapidly, institutions face the
 A IIIF viewer is a powerful tool that allows researchers, educators, and the public to engage with digitised collections in ways that were previously impossible. Through open standards, users can zoom, compare, annotate, and search within historical documents, artworks, and manuscripts—all without being confined to a single platform.
 Figure 1 shows the result of rendering the COPY 1 data within a IIIF viewer. Functionality includes being able to navigate through the images and zoom into specific regions of each image. The description of each image is displayed on the right-hand side as an annotation.
 
-![image](https://github.com/user-attachments/assets/731a0f77-1231-462e-acfa-5f4ba98441a4)
-Figure 8. Tamerlane IIIF viewer
+<kbd><img src="https://github.com/user-attachments/assets/731a0f77-1231-462e-acfa-5f4ba98441a4" width="600" border="2px"></kbd><br />
+_Figure 8. Tamerlane IIIF viewer_
  
 **Methods**: 
 To enable access to the COPY 1 data through a IIIF viewer requires the data provided in the hackathon to be converted to the IIIF Presentation standard. The output of writing code to carry out this process is available here. This included extracting the description from the JSON provided and converting it to the W3C web annotation standard. This enables IIIF Content Search functionality, allowing keyword searches to quickly locate and navigate to relevant images. Both the annotation standard and content search standard are supported by software and infrastructure developed at TNA available on our GitHub repository at https://github.com/nationalarchives/miiify and https://github.com/nationalarchives/annosearch respectively.
@@ -174,10 +177,13 @@ In order to carry on this experiment, additional stereoscopic images where provi
 Part of the COPY 1 archive contains ‘Stereoscopic’ Images. These were pairs of images that were slightly offset, in some cases with one brighter/more exposed than the other. These photos were printed side-by-side on a ‘stereocard’ which was slid into the stereoscope, a viewer with a frame to hold the stereocard and two eyepieces to view it. Viewing the images would give a 3D effect, a sort of precursor to modern 3D glasses. 
 The idea was to create a tool to generate repeating GIFs from pairs of stereoscopic images to give a sense of the three-dimensional effect that would be seen when viewing them through a stereoscope.
 
-![image](https://github.com/user-attachments/assets/3b9f364e-8341-4e3d-bf8b-3c5649ed6805)
-![image](https://github.com/user-attachments/assets/d861124e-2844-4482-be33-0870877991bf)
-![image](https://github.com/user-attachments/assets/8d907ef4-6574-43ab-b252-db25c98fd9cc)
-Figures 9-11: Example of Stereoscopic images and reconstriction through GIF animation
+
+<kbd><img src="https://github.com/user-attachments/assets/3b9f364e-8341-4e3d-bf8b-3c5649ed6805" width="600" border="2px"></kbd><br />
+
+<kbd><img src="https://github.com/user-attachments/assets/d861124e-2844-4482-be33-0870877991bf" width="600" border="2px"></kbd><br />
+
+<kbd><img src="https://github.com/user-attachments/assets/8d907ef4-6574-43ab-b252-db25c98fd9cc" width="600" border="2px"></kbd><br />
+_Figures 9-11: Example of Stereoscopic images and reconstriction through GIF animation_
  
 **Methods**: 
 Used existing Gif tools for Gif generation. Crossfaded original 2 images with intermediate frames to produce smoother transition. Also explored using generative AI to improve quality of original images (e.g. straightening, removing flaws) but with limited results
