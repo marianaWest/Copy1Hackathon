@@ -18,7 +18,7 @@ Using a mix of natural language processing (NLP) techniques, regular expressions
 The open linked data database of WikiData opens up possibilities as it connects with other GLAM institutions authority control identifiers, having potential to make subjects and objects in this collection more discoverable to researchers and the general public worldwide, while also providing a potential way for reparative metadata enrichment.
 We saw evidence that off-the-shelf large language models (LLM) perform impressively on the WikiData QID matching task, suggesting that they may replace dedicated NLP tools in the near future. 
 
- 
+
 Figure 1. COPY 1/1/34 Metadata
 As an example, the description of COPY 1/2/34 reads as “Photograph of African Princess”. While the Python packages were unable to suggest the correct WikiData ID, ChatGPT had no problem identifying this historical figure as Sara Forbes Bonetta, likely incorporating the contextual semantic information of ‘African Princess’.
 As an attempt towards reparative metadata approaches, we uncovered the identities of numerous other prominent figures from African and Asian regions depicted in the archive, such as Ethiopian royal Dejatch Alamayou, and Chung Mow, a Chinese circus performer.
