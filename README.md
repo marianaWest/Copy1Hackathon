@@ -1,6 +1,33 @@
-# COPY 1 Hackathon
+# Dataset overview
 
-## Guide to the data
+## Historical background
+
+In the 1860s photography as a medium and industry was coming under scrutiny due to its rapid development. Issues of ownership and copyright were becoming impossible to ignore and so debates ensued around how photography should be defined and protected under the law. This culminated in the 1862 Fine Arts Copyright Act, which in turn required the registration of photographs, paintings and drawings with the Stationers’ Company, a system which continued for almost 50 years. 
+Those registering a work were instructed to enter a description of the work being registered, along with the name and place of abode of the copyright owner (or proprietor of copyright) and the name and place of abode of the copyright author (the artist or photographer). The forms were then dated and signed by the owner and in many cases a copy of the work (in the form or a print or sketch) was attached to the form.
+These registration forms and attached artwork, along with related registers and indexes were eventually transferred to the Public Record Office, now The National Archives (TNA). This collection (COPY 1) now comprises potentially over 400,000 individual entry forms. 
+
+![image](https://github.com/user-attachments/assets/461f961e-efea-421d-93a4-5a3c3b01c15b)
+
+![image](https://github.com/user-attachments/assets/4f7bb20a-f7f0-4f5c-827d-e8dd3aa157d3)
+
+Fig. 1 and 2. Examples of a deposited image and its associated registration form.
+
+
+## Catalogue records
+
+The individual entry forms registering photographs (COPY 1 – Photographs) have been fully transcribed and catalogued by volunteers and metadata is openly available and downloadable from TNA’s online catalogue Discovery. The metadata includes each document classification and the full transcription of the description of the photograph, as well as the key stakeholders (copyright depositor and owner) and the location of the registration. However these are conflated in the “Description” field, making the downloaded metadata only semi-structured.
+
+
+![image](https://github.com/user-attachments/assets/2f93df8e-2eee-4c0f-8bf2-a84b1efc2621)
+
+Fig. 3. Example of a catalogue record at The National Archives.
+
+
+
+# Guide to the data
+
+_to be edited_
+
 There are two folders, one for Images and one for Metadata. The images are all extracted from the PDFs available to download at: https://discovery.nationalarchives.gov.uk/details/r/C325807
 
 The images are digitised versions of forms submitted to the Stationer's Company in the first quarter of 1883 to register the copyright of photographs or other artworks. Generally, a form is filled in with a description of the photography/art and details of the Author and Owner of the Copyright. A copy of the copyrighted image is attached to the form. In most cases, therefore, there are two digitised versions of each form - one with the image visible, and another with it folded out the way so that the details of the form are visible. This is not always the case.
