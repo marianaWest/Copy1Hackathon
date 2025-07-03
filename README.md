@@ -28,6 +28,23 @@ Fig. 3. Example of a catalogue record at The National Archives.
 
 _to be edited_
 
+## RAW Catalogue files
+
+The COPY 1 Photography collection can be downloaded from [The National Archives catalogue](https://discovery.nationalarchives.gov.uk/)
+To do so:
+* Go to "Advanced search"
+* Search for "Photographs" and restrict the references field to "COPY 1" (see screenshot below)
+* Filter the results by:
+    * *Held by*: The National Archives
+    * *Collection*: COPY
+    * *Catalogue level*: Piece
+* Once filtered the results, click "Export results" on the ribbon and choose the preferred format
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/70d37ae2-7c70-48cb-84bd-cdb1356ccab6" /><br />
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/ce166cd5-bada-42b3-8038-397d996a20b1" /><br />
+
+## Processed Metadata
 There are two folders, one for Images and one for Metadata. The images are all extracted from the PDFs available to download at: https://discovery.nationalarchives.gov.uk/details/r/C325807
 
 The images are digitised versions of forms submitted to the Stationer's Company in the first quarter of 1883 to register the copyright of photographs or other artworks. Generally, a form is filled in with a description of the photography/art and details of the Author and Owner of the Copyright. A copy of the copyrighted image is attached to the form. In most cases, therefore, there are two digitised versions of each form - one with the image visible, and another with it folded out the way so that the details of the form are visible. This is not always the case.
