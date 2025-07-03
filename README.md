@@ -44,7 +44,24 @@ To do so:
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/ce166cd5-bada-42b3-8038-397d996a20b1" /><br />
 
-## Processed Metadata
+
+## Processed metadata
+The catalogue entries in Discovery are formatted for presentation on the web and therefore contain HTML tags. In addition, the information in the catalogue is captured in a semi-structured format with field names (e.g. Copyright owner of work). As an added convenience we have used regular expressions to parse the catalogue entries and separate them into field-value pairs which have been added to the json files.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/16aeebb9-d89e-45cf-a57d-3f8809f511ef" />
+
+The **Metadata** folder contains two versions of the processed data:
+* [Processed metadata JSON][Metadata](Metadata/Processed metadata/COPY 1 processed json.zip)
+* [Processed metadata TSV][Metadata](Metadata/Processed metadata/COPY 1 processed tsv.zip)
+
+
+## Split metadata
+Despite the convenience of processed metadata, the dataset retains quite a lot of inconsistencies that can limit its use. 
+One such examples are the copyright owners and authors addresses:
+
+![image](https://github.com/user-attachments/assets/91d0ddf3-2d5f-4b6b-835a-457ac7d724d9)
+
+
 There are two folders, one for Images and one for Metadata. The images are all extracted from the PDFs available to download at: https://discovery.nationalarchives.gov.uk/details/r/C325807
 
 The images are digitised versions of forms submitted to the Stationer's Company in the first quarter of 1883 to register the copyright of photographs or other artworks. Generally, a form is filled in with a description of the photography/art and details of the Author and Owner of the Copyright. A copy of the copyrighted image is attached to the form. In most cases, therefore, there are two digitised versions of each form - one with the image visible, and another with it folded out the way so that the details of the form are visible. This is not always the case.
@@ -60,9 +77,5 @@ Each of the json records represents a box of forms. The reference number (C32...
 You can also browse the contents of a box by appending the same reference number to: https://discovery.nationalarchives.gov.uk/browse/r/h/
 
 The images in the Images folder are from box 60 (reference COPY 1/60, see: https://discovery.nationalarchives.gov.uk/browse/r/h/C325807). Each individual form has a number stamped on it (usually in the top right hand corner, but sometimes further down). That number completes the catalogue reference for that specific form. So the form with number 22 on it has reference COPY 1/60/22. The file names of the images in the Image folder do not match those reference numbers (since there is not a 1:1 relationship between images and forms), so the image file names have been added into the json file for this box only. As it is a special case the file C325807_catalogue_structure.json has been copied into the Metadata folder outside of the zip file for convenience.
-
-## Processed metadata
-
-The catalogue entries in Discovery are formatted for presentation on the web and therefore contain HTML tags. In addition, the information in the catalogue is captured in a semi-structured format with field names (e.g. Copyright owner of work). As an added convenience we have used regular expressions to parse the catalogue entries and separate them into field-value pairs which have been added to the json files.
 
 Finally, for COPY 1/60 we have experimented with the Llama 3.2 LLM to further process the catalogue entries so that names and addresses are separated into the individual fields within the json.
