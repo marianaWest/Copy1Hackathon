@@ -44,8 +44,9 @@ To do so:
 * Once filtered the results, click "Export results" on the ribbon and choose the preferred format.
 
 An example of a single catalogue record can be found here: https://discovery.nationalarchives.gov.uk/details/r/C9082740
+You can also browse the contents of a box by appending the same reference number to: https://discovery.nationalarchives.gov.uk/browse/r/h/
 
-The exported dataset should include the following records/boxes: COPY 1/1-60 and COPY 1/364-566
+The exported dataset should include the following records/boxes: <ins>COPY 1/1-60</ins> and <ins>COPY 1/364-566</ins>
 These have all been individually catalogued by volunteer. Other boxes include drawings and other copyrighted material. These are in the process of being catalogues at item level and will be available at some point in the future. 
 
 <kbd><img src="https://github.com/user-attachments/assets/70d37ae2-7c70-48cb-84bd-cdb1356ccab6" width="600" border="2px"></kbd><br />
@@ -60,11 +61,13 @@ The catalogue entries in Discovery are formatted for presentation on the web and
 <kbd><img src="https://github.com/user-attachments/assets/16aeebb9-d89e-45cf-a57d-3f8809f511ef" width="600" border="2px"></kbd><br />
 
 The **COPY 1 processed data** folder contains two versions of the processed data:
-* [Processed metadata JSON][Metadata](Metadata/COPY 1 processed data/COPY 1 processed json.zip)
-* [Processed metadata TSV][Metadata](Metadata/COPY 1 processed data/COPY 1 processed tsv.zip)
+* [Processed metadata JSON](Metadata/COPY 1 processed data/COPY 1 processed json.zip)
+* [Processed metadata TSV](Metadata/COPY 1 processed data/COPY 1 processed tsv.zip)
 
 Each of the json records represents a box of forms. 
 The reference number (C32.....) at the beginning of each json file name is the Discovery reference number which can be appended to the following URL to find it in the catalogue: https://discovery.nationalarchives.gov.uk/details/r/
+
+For COPY 1/60 we have experimented with the Llama 3.2 LLM to further process the catalogue entries so that names and addresses are separated into the individual fields within the json.
 
 ## COPY 1 split metadata
 Despite the convenience of processed metadata, the dataset retains quite a lot of inconsistencies that can limit its use. 
@@ -72,20 +75,28 @@ One such examples are the copyright owners and authors addresses:
 
 <kbd><img src="https://github.com/user-attachments/assets/91d0ddf3-2d5f-4b6b-835a-457ac7d724d9" width="600" border="2px"></kbd><br />
 
-To make the dataset more user-friendly, this has been processed using Open Refine. Detailed information on how this has been done and a copy of the script exported from Open Refine can be found in the **[Data cleaning pipeline](Metadata/COPY 1 split data)**
+To make the dataset more user-friendly, this has been processed using Open Refine. Detailed information on how this has been done and a copy of the script exported from Open Refine can be found in the **[Data cleaning pipeline](Metadata/COPY 1 split data)** folder.
+
+Splitting include:
+* Address (comma-split)
+* Addition of _Approximate Location_
+* Multiple copyright owners and authors
 
 
-The metadata folder contains three files. The larger copy1_catalogue.zip file contains 275 json files derived from the The National Archives' Discovery catalogue. A tabular (tab separated) version of this data is also available in the copy1_catalogue_tsv.zip file.
+## Collaborative hackathon
+In January 2025 a hybrid collaborative hackathon was held at The National Archives. Participants have experimented with the _COPY proccessed data_ 
+Additional material was made available, this included:
+* COPY 1/60 images
+* Selection of stereoscopic images from different boxes
 
+The outcome of the hackathon and a report of the experiments run by the teams can be accessed reading the co-authored [Collaborative hackathon experimentation report](Collaborative hackathon/Collaborative hackathon experimentation.md)
 
+The hackathon was generously supported by The National Archives strategic fund 2024/2025.
 
+### Images (COPY 1/60)
+The images are digitised versions of forms submitted to the Stationer's Company. A copy of the copyrighted image is attached to the form. In most cases, therefore, there are two digitised versions of each form - one with the image visible, and another with it folded out the way so that the details of the form are visible. This is not always the case.
 
-
-You can also browse the contents of a box by appending the same reference number to: https://discovery.nationalarchives.gov.uk/browse/r/h/
-## Images
-The images are digitised versions of forms submitted to the Stationer's Company in the first quarter of 1883 to register the copyright of photographs or other artworks. Generally, a form is filled in with a description of the photography/art and details of the Author and Owner of the Copyright. A copy of the copyrighted image is attached to the form. In most cases, therefore, there are two digitised versions of each form - one with the image visible, and another with it folded out the way so that the details of the form are visible. This is not always the case.
-
- The images are all extracted from the PDFs available to download at: https://discovery.nationalarchives.gov.uk/details/r/C325807
+The images are all extracted from the PDFs available to download at: https://discovery.nationalarchives.gov.uk/details/r/C325807
 The images in the Images folder are from box 60 (reference COPY 1/60, see: https://discovery.nationalarchives.gov.uk/browse/r/h/C325807). Each individual form has a number stamped on it (usually in the top right hand corner, but sometimes further down). That number completes the catalogue reference for that specific form. So the form with number 22 on it has reference COPY 1/60/22. The file names of the images in the Image folder do not match those reference numbers (since there is not a 1:1 relationship between images and forms), so the image file names have been added into the json file for this box only. As it is a special case the file C325807_catalogue_structure.json has been copied into the Metadata folder outside of the zip file for convenience.
 
-Finally, for COPY 1/60 we have experimented with the Llama 3.2 LLM to further process the catalogue entries so that names and addresses are separated into the individual fields within the json.
+For COPY 1/60 we have experimented with the Llama 3.2 LLM to further process the catalogue entries so that names and addresses are separated into the individual fields within the json.
