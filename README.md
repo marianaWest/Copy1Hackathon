@@ -3,8 +3,8 @@
 
 ## Historical background
 
-In the 1860s photography as a medium and industry was coming under scrutiny due to its rapid development. Issues of ownership and copyright were becoming impossible to ignore and so debates ensued around how photography should be defined and protected under the law. This culminated in the 1862 Fine Arts Copyright Act, which in turn required the registration of photographs, paintings and drawings with the Stationers’ Company, a system which continued for almost 50 years. 
-Those registering a work were instructed to enter a description of the work being registered, along with the name and place of abode of the copyright owner (or proprietor of copyright) and the name and place of abode of the copyright author (the artist or photographer). The forms were then dated and signed by the owner and in many cases a copy of the work (in the form or a print or sketch) was attached to the form.
+In the 1860s photography as a medium and industry was coming under scrutiny in Britain due to its rapid development. Issues of ownership and copyright were becoming impossible to ignore and so debates ensued around how photography should be defined and protected under the law. This culminated in the 1862 Fine Arts Copyright Act, which in turn required a system of registration of photographs, paintings and drawings with the Stationers’ Company, a system which continued for almost 50 years. 
+Those registering a work were instructed to complete a form entering a description of the work being registered, along with the name and address of the copyright owner (or proprietor of copyright) and the name and address of the copyright author (the artist or photographer). The forms were then dated and signed by the owner and in many cases a copy of the work (in the form or a print or sketch) was attached to the form.
 These registration forms and attached artwork, along with related registers and indexes were eventually transferred to the Public Record Office, now The National Archives (TNA). This collection (COPY 1) now comprises potentially over 400,000 individual entry forms. 
 
 <kbd><img src="https://github.com/user-attachments/assets/461f961e-efea-421d-93a4-5a3c3b01c15b" width="600" border="2px"></kbd><br />
@@ -17,7 +17,7 @@ Fig. 1 and 2. Examples of a deposited image and its associated registration form
 
 ## Catalogue records
 
-The individual entry forms registering photographs (COPY 1 – Photographs) have been fully transcribed and catalogued by volunteers and metadata is openly available and downloadable from TNA’s online catalogue Discovery. The metadata includes each document classification and the full transcription of the description of the photograph, as well as the key stakeholders (copyright depositor and owner) and the location of the registration. However these are conflated in the “Description” field, making the downloaded metadata only semi-structured.
+The individual entry forms registering photographs (COPY 1 – Photographs) have been fully transcribed and catalogued by volunteers and metadata is openly available and downloadable from TNA’s online catalogue Discovery. The metadata includes each document classification and the full transcription of the description of the photograph, as well as the key stakeholders (copyright depositor and owner) and their addresss. However these individual pieces of information are conflated in the “Description” field, making the downloaded metadata only semi-structured.
 
 <kbd><img src="https://github.com/user-attachments/assets/2f93df8e-2eee-4c0f-8bf2-a84b1efc2621" width="600" border="2px"></kbd><br />
 
@@ -39,31 +39,31 @@ We haven't included raw data, as this can easily be downloaded from Discovery.
 
 ## RAW Catalogue files
 
-The COPY 1 Photography collection can be downloaded from [The National Archives catalogue](https://discovery.nationalarchives.gov.uk/)
+Metadata for the COPY 1 Photography collection can be downloaded from [The National Archives catalogue](https://discovery.nationalarchives.gov.uk/). When using the catalogue, an *item* is an individual entry form and attached photograph. A *piece* is a box of entry forms with attached photographs.
 
-To do so:
+To download metadata from the catalogue:
 
 * Go to "Advanced search"
-* Search for "Photographs" and restrict the references field to "COPY 1" (see screenshot below)
-* Filter the results by:
+* Use the following options
+    * *Any of these words*: Photographs
+    * *Any of these references*: COPY 1
+    * *Date range*: Select a date range
     * *Held by*: The National Archives
-    * *Collection*: COPY
-    * *Catalogue level*: Piece
+    * *Catalogue level*: Item
 
 <kbd><img src="https://github.com/user-attachments/assets/70d37ae2-7c70-48cb-84bd-cdb1356ccab6" width="600" border="2px"></kbd><br />
 
-* Once filtered the results, click "Export results" on the ribbon and choose the preferred format.
+* Click "Search"
+* Click "Export results" on the ribbon and choose the preferred format.
 
-<kbd><img src="https://github.com/user-attachments/assets/ce166cd5-bada-42b3-8038-397d996a20b1" width="600" border="2px"></kbd><br />
+<kbd><img width="644" height="344" alt="image" src="https://github.com/user-attachments/assets/cd4a5701-1af1-4f8a-9a06-fbc6038fdb39" />
 
+Exporting all of your results is only possible when there are fewer than 10,000 results. If you wish to export more, read the guidance on using our Discovery API [here](https://www.nationalarchives.gov.uk/help/discovery-for-developers-about-the-application-programming-interface-api/).
 
-An example of a single catalogue record can be found [here](https://discovery.nationalarchives.gov.uk/details/r/C9082740) 
-You can also browse the contents of a box by appending the same reference number to: https://discovery.nationalarchives.gov.uk/browse/r/h/
+An example of a catalogue record for an individual entry form and photograph can be found at https://discovery.nationalarchives.gov.uk/details/r/C9082740
+You can also browse the contents of a piece by appending the same reference number found at the end of the URL (e.g. C9082740) to: https://discovery.nationalarchives.gov.uk/browse/r/h/
 
-The exported dataset should include the following records/boxes: **COPY 1/1-60** and **COPY 1/364-566**
-These have all been individually catalogued by volunteer. Other boxes include drawings and other copyrighted material. These are in the process of being catalogues at item level and will be available at some point in the future. 
-
-
+Pieces **COPY 1/1 - COPY 1/60** and **COPY 1/364 - COPY 1/566** have all been individually catalogued to item level by volunteers. Other pieces in the collection include drawings and other copyrighted material. These are in the process of being catalogued to item level and the full metadat will be available in the future. 
 
 ## COPY 1 processed data
 
