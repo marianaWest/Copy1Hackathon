@@ -33,7 +33,7 @@ The **Metadata** folder contains two sets of metadata and some data cleaning ins
 * COPY 1 Split data
 * Data cleaning pipeline
 
-We haven't included raw data, as this can easily be downloaded from Discovery.
+We haven't included raw data, as this can easily be downloaded from Discovery following the instruction below. 
 
 
 
@@ -89,12 +89,23 @@ One such examples are the copyright owners and authors addresses:
 
 <kbd><img src="https://github.com/user-attachments/assets/91d0ddf3-2d5f-4b6b-835a-457ac7d724d9" width="600" border="2px"></kbd><br />
 
-To make the dataset more user-friendly, this has been processed using Open Refine. Detailed information on how this has been done and a copy of the script exported from Open Refine can be found in the **[Data cleaning pipeline](Metadata/COPY 1 split data)** folder.
+To make the dataset more user-friendly, we have produced a single spreadsheet where we have:
+* Combined all the separate processed JSON files into a single spreadsheet
+* Splitted:
+    * "Copyright owner"  -> "Copyright owner name" AND "Copyright owner address"
+    * "Copyright author" -> "Copyright author name" AND "Copyright author address"
 
-Splitting include:
-* Address (comma-split)
-* Addition of _Approximate Location_
-* Multiple copyright owners and authors
+The **COPY 1 split data** folder contains :
+* [COPY 1 split data](Metadata/COPY 1 split data/COPY 1_json_combined_split.xlsx)
+* [Jupyter notebook](Metadata/COPY 1 split data/COPY1_split_names_addresses.ipynb)
+
+
+
+# Experimentation
+
+The Experimentation folder includes examples of experiments attempted using COPY 1 data. 
+Some experiments required extra data, like images of records or examples of stereographic photographs. 
+We are keen to collect other examples of experiments and code, so if you have anything to submit, please to get in touch with XXX or XXXX (KH: shall we add research? or our contacts?)
 
 
 
@@ -106,7 +117,6 @@ Additional material was made available, this included:
 * Selection of stereoscopic images from different boxes
 
 The outcome of the hackathon and a report of the experiments run by the teams can be accessed reading the co-authored [Collaborative hackathon experimentation report](Collaborative hackathon/Collaborative hackathon experimentation.md)
-
 The hackathon was generously supported by The National Archives strategic fund 2024/2025.
 
 
