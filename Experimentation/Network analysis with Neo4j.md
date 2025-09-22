@@ -1,6 +1,6 @@
 # Network analysis with Neo4j
 
-Experiments by: _Natasha Kitcher_
+Experiments by: _Natasha Kitcher_, Digital Researcher, The National Archives
 
 To understand if and how the copy 1 catalogue could be brought together, and queried as a connected collection, I built a ‘Neo4J’ relational graph interface and fed in a subset of 1000 entries. 
 Neo4J is a graph database consisting of a series of nodes and relationships that the user defines. I used a program called ‘arrows’ to create my own schema for how I would like each individual row of the copy 1 spreadsheet to be presented in Neo4J. 
