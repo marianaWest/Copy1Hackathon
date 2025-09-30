@@ -103,7 +103,7 @@ One such examples are the copyright owners and authors addresses, which can be i
 This variation is caused by a range of factors: changes in names and addresses over time, different people filling in forms at different times and, most importantly the fact that these historical inconsistencies had been preserved through a transcription process which prioritises precision to guarantee historical accuracy as per best cataloguing practices. Eventually, after some internal experimentation and debate, we opted to preserve these variations rather than standardise them. It was preferable to keep fuzzy but historically authentic data, rather than potentially introduce inaccuracies by editing them.  
 
 The **COPY 1 split data** folder contains :
-* [COPY 1 split data](Metadata/COPY 1 split data/COPY 1_json_combined_split.xlsx)
+* [COPY 1 split data](Metadata/COPY 1 split data/COPY 1_json_combined_split.csv)
 * [Jupyter notebook](Metadata/COPY 1 split data/COPY1_split_metadata.ipynb)
 
 
@@ -118,7 +118,7 @@ We are keen to collect other examples of experiments and code, so if you have an
 
 ## Collaborative hackathon
 
-In January 2025 a hybrid collaborative hackathon was held at The National Archives. Participants have experimented with the _COPY proccessed data_ 
+In January 2025 a hybrid collaborative hackathon was held at The National Archives. Participants have experimented with the _COPY processed data_ 
 Additional material was made available, this included:
 * COPY 1/60 images
 * Selection of stereoscopic images from different boxes
