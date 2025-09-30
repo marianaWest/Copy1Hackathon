@@ -31,7 +31,6 @@ The **Metadata** folder contains two sets of metadata and some data cleaning ins
 
 * COPY 1 Processed data
 * COPY 1 Split data
-* Data cleaning pipeline
 
 We haven't included raw data, as this can easily be downloaded from Discovery following the instruction below. 
 
@@ -63,7 +62,7 @@ Exporting all of your results is only possible when there are fewer than 10,000 
 An example of a catalogue record for an individual entry form and photograph can be found at https://discovery.nationalarchives.gov.uk/details/r/C9082740
 You can also browse the contents of a piece by appending the same reference number found at the end of the URL (e.g. C9082740) to: https://discovery.nationalarchives.gov.uk/browse/r/h/
 
-Pieces **COPY 1/1 - COPY 1/60** and **COPY 1/364 - COPY 1/566** have all been individually catalogued to item level by volunteers. Other pieces in the collection include drawings and other copyrighted material. These are in the process of being catalogued to item level and the full metadat will be available in the future. 
+Pieces **COPY 1/1 - COPY 1/60** and **COPY 1/364 - COPY 1/566** have all been individually catalogued to item level by volunteers. Other pieces in the collection include drawings and other copyrighted material. These are in the process of being catalogued to item level and the full metadata will be available in the future. 
 
 ## COPY 1 processed data
 
@@ -84,20 +83,28 @@ For COPY 1/60 we have experimented with the Llama 3.2 LLM to further process the
 
 ## COPY 1 split metadata
 
+To improve the usability of the dataset, the data from the JSON files was then processed further using a python script.
+
+The script downloads the JSON files, combines them into a single pandas dataframe and performs the following additional processing:
+* Splits 'CopyrightOwner' and 'CopyrightAuthor' columns by the first comma into name and address components, and cleans up whitespace and trailing characters.
+   * "Copyright owner"  -> "Copyright owner name" AND "Copyright owner address"
+   * "Copyright author" -> "Copyright author name" AND "Copyright author address"
+* Removes unecessary columns and reoerders columns.
+* Allows the user to filter the dataframe by year.
+* Saves the filtered DataFrame to a CSV file with a filename that includes the selected year range and downloads the generated CSV file.
+
+The generated CSV file containing the metadata is now ready for further experimentation.
+
 Despite the convenience of processed metadata, the dataset retains quite a lot of inconsistencies that can limit its use. 
-One such examples are the copyright owners and authors addresses:
+One such examples are the copyright owners and authors addresses, which can be inconsistent and are not easily reconcilable:
 
 <kbd><img src="https://github.com/user-attachments/assets/91d0ddf3-2d5f-4b6b-835a-457ac7d724d9" width="600" border="2px"></kbd><br />
 
-To make the dataset more user-friendly, we have produced a single spreadsheet where we have:
-* Combined all the separate processed JSON files into a single spreadsheet
-* Splitted:
-    * "Copyright owner"  -> "Copyright owner name" AND "Copyright owner address"
-    * "Copyright author" -> "Copyright author name" AND "Copyright author address"
+This variation is caused by a range of factors: changes in names and addresses over time, different people filling in forms at different times and, most importantly the fact that these historical inconsistencies had been preserved through a transcription process which prioritises precision to guarantee historical accuracy as per best cataloguing practices. Eventually, after some internal experimentation and debate, we opted to preserve these variations rather than standardise them. It was preferable to keep fuzzy but historically authentic data, rather than potentially introduce inaccuracies by editing them.  
 
 The **COPY 1 split data** folder contains :
 * [COPY 1 split data](Metadata/COPY 1 split data/COPY 1_json_combined_split.xlsx)
-* [Jupyter notebook](Metadata/COPY 1 split data/COPY1_split_names_addresses.ipynb)
+* [Jupyter notebook](Metadata/COPY 1 split data/COPY1_split_metadata.ipynb)
 
 
 
