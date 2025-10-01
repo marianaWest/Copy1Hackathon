@@ -124,7 +124,7 @@ Additional material was made available, this included:
 * Selection of stereoscopic images from different boxes
 
 The outcome of the hackathon and a report of the experiments run by the teams can be accessed reading the co-authored [Collaborative hackathon experimentation report](Collaborative hackathon/Collaborative hackathon experimentation.md)
-The hackathon was generously supported by The National Archives strategic fund 2024/2025.
+The hackathon was generously supported by The National Archives strategic research fund 2024/2025.
 
 
 
