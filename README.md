@@ -112,7 +112,7 @@ The **COPY 1 split data** folder contains :
 
 The Experimentation folder includes examples of experiments attempted using COPY 1 data. 
 Some experiments required extra data, like images of records or examples of stereographic photographs. 
-We are keen to collect other examples of experiments and code, so if you have anything to submit, please to get in touch with XXX or XXXX (KH: shall we add research? or our contacts?)
+We are keen to hear about other examples of experiments and code, so if you have anything to share, please to get in touch with [katherine.howells@nationalarchives.gov.uk](mailto:katherine.howells@nationalarchives.gov.uk) or [giorgia.tolfo@nationalarchives.gov.uk](mailto:giorgia.tolfo@nationalarchives.gov.uk).
 
 
 
