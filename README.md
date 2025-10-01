@@ -64,7 +64,7 @@ You can also browse the contents of a piece by appending the same reference numb
 
 Pieces **COPY 1/1 - COPY 1/60** and **COPY 1/364 - COPY 1/566** have all been individually catalogued to item level by volunteers. Other pieces in the collection include drawings and other copyrighted material. These are in the process of being catalogued to item level and the full metadata will be available in the future. 
 
-## COPY 1 processed data
+## COPY 1 processed metadata
 
 The catalogue entries in Discovery are formatted for presentation on the web and therefore contain HTML tags. In addition, the information in the catalogue is captured in a semi-structured format with field names (e.g. Copyright owner of work). As an added convenience we have used regular expressions to parse the catalogue entries and separate them into field-value pairs which have been added to the json files.
 
@@ -93,7 +93,7 @@ The script downloads the JSON files, combines them into a single pandas datafram
 * Allows the user to filter the dataframe by year.
 * Saves the filtered DataFrame to a CSV file with a filename that includes the selected year range and downloads the generated CSV file.
 
-The generated CSV file containing the metadata is now ready for further experimentation.
+The generated CSV file containing the metadata is now ready for further experimentation. A zip file containing a csv of the entire processed and split dataset can be found in the **COPY 1 split data** folder, along with a Jupyter notebook containing the code.
 
 Despite the convenience of processed metadata, the dataset retains quite a lot of inconsistencies that can limit its use. 
 One such examples are the copyright owners and authors addresses, which can be inconsistent and are not easily reconcilable:
