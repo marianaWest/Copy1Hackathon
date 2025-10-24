@@ -2,7 +2,7 @@ import json
 import re
 
 input_file = "data.json"
-output_file = "data_parsed.json"
+output_file = "data_parsed_test.json"
 
 
 patterns = {
