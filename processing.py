@@ -2,12 +2,14 @@ import csv
 import sys
 import json
 
+
 csv.field_size_limit(10_000_000)
 
 csv_file = "TNA_Search_Results_23-10-2025_child.csv"
 json_file = "data.json"
 columns_to_keep = ["Citable Reference", "Context Description", "Title", "Description", "Start Date"]
 phrases_to_exclude = ["Josefine Stross", "Photographer: Unknown", "Photographer(s): Unknown", "Beato, Felice"]
+
 
 filtered_rows = []
 
