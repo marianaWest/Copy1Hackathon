@@ -1,6 +1,8 @@
 import csv
 import sys
 import json
+import gender_guesser.detector as gender
+
 
 csv.field_size_limit(10_000_000)
 
