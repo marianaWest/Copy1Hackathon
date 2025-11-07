@@ -57,7 +57,16 @@ for item in non_female_by_honorific:
 with open("female_by_name.json", "w", encoding="utf-8") as f:
     json.dump(female_by_name, f, indent=4, ensure_ascii=False)
 
+female_honorific_name = female_by_honorific.copy()
+
+for item in female_by_name:
+    if item not in female_honorific_name:
+        female_honorific_name.append(item)
+
+with open("female_honorific_name.json", "w", encoding="utf-8") as f:
+    json.dump(female_honorific_name, f, indent=4, ensure_ascii=False)
 
 
-print(f"All items with photographers: {len(with_photographer)}, female by honorific: {len(female_by_honorific)}, female by name: {len(female_by_name)}")
+
+print(f"All items with photographers: {len(with_photographer)}, female by honorific: {len(female_by_honorific)}, female by name: {len(female_by_name)}, combined list: {len(female_honorific_name)}")
 
