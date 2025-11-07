@@ -33,8 +33,8 @@ for item in with_photographer:
     if not found:
         non_female_by_honorific.append(item)
 
-with open("female_by_honorific.json", "w", encoding="utf-8") as f:
-    json.dump(female_by_honorific, f, indent=4, ensure_ascii=False)
+# with open("female_by_honorific.json", "w", encoding="utf-8") as f:
+#     json.dump(female_by_honorific, f, indent=4, ensure_ascii=False)
 
 # checks for first name that appears 
 for item in non_female_by_honorific:
@@ -54,8 +54,8 @@ for item in non_female_by_honorific:
     if not found: 
         undefined_by_name.append(item)
 
-with open("female_by_name.json", "w", encoding="utf-8") as f:
-    json.dump(female_by_name, f, indent=4, ensure_ascii=False)
+# with open("female_by_name.json", "w", encoding="utf-8") as f:
+#     json.dump(female_by_name, f, indent=4, ensure_ascii=False)
 
 female_honorific_name = female_by_honorific.copy()
 
@@ -63,10 +63,12 @@ for item in female_by_name:
     if item not in female_honorific_name:
         female_honorific_name.append(item)
 
-with open("female_honorific_name.json", "w", encoding="utf-8") as f:
-    json.dump(female_honorific_name, f, indent=4, ensure_ascii=False)
+# with open("female_honorific_name.json", "w", encoding="utf-8") as f:
+#     json.dump(female_honorific_name, f, indent=4, ensure_ascii=False)
 
 
+with open("undefined.json", "w", encoding="utf-8") as f:
+    json.dump(undefined_by_name, f, indent=4, ensure_ascii=False)
 
-print(f"All items with photographers: {len(with_photographer)}, female by honorific: {len(female_by_honorific)}, female by name: {len(female_by_name)}, combined list: {len(female_honorific_name)}")
+print(f"All items with photographers: {len(with_photographer)}, female by honorific: {len(female_by_honorific)}, female by name: {len(female_by_name)}, combined list: {len(female_honorific_name)}, undefined by name: {len(undefined_by_name)}")
 
