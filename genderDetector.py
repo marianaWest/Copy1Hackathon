@@ -6,7 +6,8 @@ identification_keys = ["Copyright owner of work","Copyright author of work",  "P
 female_honorifics = ["miss ", "miss.", "mrs", "mrs. ", "ms. ", "lady", "madame", "dame ", "madam"]
 female_by_honorific = []
 non_female_by_honorific = []
-gender_by_name = []
+female_by_name = []
+undefined_by_name = []
 
 with open("data_parsed.json", "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -15,15 +16,7 @@ with open("data_parsed.json", "r", encoding="utf-8") as f:
 with_photographer = [
     item for item in data
     if any(key in item for key in identification_keys)
-]
-
-def detect_gender(name):
-    print(detector.get_gender(name))
-
-result = detect_gender('Mrs')
-print(result)
-
-
+    ]
 
 # checks for honorifics
 for item in with_photographer:
@@ -40,8 +33,31 @@ for item in with_photographer:
     if not found:
         non_female_by_honorific.append(item)
 
-print(len(female_by_honorific))
-print(len(non_female_by_honorific))
+with open("female_by_honorific.json", "w", encoding="utf-8") as f:
+    json.dump(female_by_honorific, f, indent=4, ensure_ascii=False)
 
-# with open("female_by_honorific", "w", encoding="utf-8") as f:
-#     json.dump(female_by_honorific, f, indent=4, ensure_ascii=False)
+# checks for first name that appears 
+for item in non_female_by_honorific:
+    found = False
+
+    for key in identification_keys:
+        if key in item and isinstance(item[key], str):
+            name = item.get(key)
+            if name:
+                first_name = name.split()[0]
+                gender_result = detector.get_gender(first_name)
+                if gender_result in ("female", "mostly_female"): 
+                    female_by_name.append(item)
+                    found = True
+                    break
+    
+    if not found: 
+        undefined_by_name.append(item)
+
+with open("female_by_name.json", "w", encoding="utf-8") as f:
+    json.dump(female_by_name, f, indent=4, ensure_ascii=False)
+
+
+
+print(f"All items with photographers: {len(with_photographer)}, female by honorific: {len(female_by_honorific)}, female by name: {len(female_by_name)}")
+
