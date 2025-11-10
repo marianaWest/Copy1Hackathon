@@ -8,6 +8,7 @@ female_by_honorific = []
 non_female_by_honorific = []
 female_by_name = []
 undefined_by_name = []
+undefined = []
 
 with open("data_parsed.json", "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -67,8 +68,17 @@ for item in female_by_name:
 #     json.dump(female_honorific_name, f, indent=4, ensure_ascii=False)
 
 
+# with open("undefined.json", "w", encoding="utf-8") as f:
+#     json.dump(undefined_by_name, f, indent=4, ensure_ascii=False)
+
+# print(f"All items with photographers: {len(with_photographer)}, female by honorific: {len(female_by_honorific)}, female by name: {len(female_by_name)}, combined list: {len(female_honorific_name)}, undefined by name: {len(undefined_by_name)}")
+
+
+for item in with_photographer:
+    if item not in female_honorific_name:
+        undefined.append(item)
+
 with open("undefined.json", "w", encoding="utf-8") as f:
-    json.dump(undefined_by_name, f, indent=4, ensure_ascii=False)
+    json.dump(undefined, f, indent=4, ensure_ascii=False)
 
-print(f"All items with photographers: {len(with_photographer)}, female by honorific: {len(female_by_honorific)}, female by name: {len(female_by_name)}, combined list: {len(female_honorific_name)}, undefined by name: {len(undefined_by_name)}")
-
+print(f"items in undefined: {len(undefined)}")
