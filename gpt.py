@@ -23,22 +23,24 @@ batch_size = 100
 #         if ():
 #             probably_female.append(item)
 
-probably_female = []
+female_AI = []
 
-for i, item in enumerate(undefined_names[:30], 1):
+for i, item in enumerate(undefined_names[:10], 1):
     owner = item.get("Copyright owner", "")
     author = item.get("Copyright author of work", "")
     text_to_check = f"{owner} {author}"
 
     response = client.responses.create(
         model="gpt-3.5-turbo",
+        temperature=0,
         input=[
             {
                 "role": "user",
                 "content": [
                     {
                         "type": "input_text",
-                        "text": f"Check if any female name appears in the following text: {text_to_check}. Reply only with 'yes' or 'no'."
+                        "text": "Return only one word: 'Yes' if a clearly female name appears in the text below; otherwise, return 'No'. Do not include any explanation.\n\n"
+                         f"Text: {text_to_check}"
                     },
                 ],
             },
@@ -49,8 +51,9 @@ for i, item in enumerate(undefined_names[:30], 1):
     print(f"For item {i}, computer says {output_text}")
 
     if "yes" in output_text:
-        probably_female.append(item)
+        female_AI.append(item)
 
+print(len(female_AI))
 
-
-print(len(probably_female))
+with open("female_AI.json", "w", encoding="utf-8") as f:
+    json.dump(female_AI, f, indent=4, ensure_ascii=False)
