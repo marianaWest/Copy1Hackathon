@@ -1,8 +1,34 @@
+import csv
 import json
 import re
 
-input_file = "data.json"
-output_file = "data_parsed.json"
+
+csv.field_size_limit(10_000_000)
+
+csv_file = "TNA_Search_Results_23-10-2025_child.csv"
+search_results = "data/data.json"
+columns_to_keep = ["Citable Reference", "Context Description", "Title", "Description", "Start Date"]
+phrases_to_exclude = ["Josefine Stross", "Photographer: Unknown", "Photographer(s): Unknown", "Beato, Felice"]
+
+filtered_rows = []
+
+with open(csv_file, mode='r', encoding='utf-8', errors='ignore') as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        filtered_row = {key: row[key] for key in columns_to_keep if key in row}
+        if not any(
+            phrase.lower() in str(value).lower()
+            for phrase in phrases_to_exclude
+            for value in filtered_row.values()
+            ):
+            filtered_rows.append(filtered_row)
+    
+
+        with open(search_results, mode='w', encoding='utf-8') as f:
+            json.dump(filtered_rows, f, indent=4, ensure_ascii=False)
+
+
+output_file = "data/search_results_parsed.json"
 
 # Patterns for different copyright and photographer labels
 pattern_groups = {
@@ -36,7 +62,7 @@ pattern_groups = {
 
 fields_to_check = ["Description", "Context Description", "Title"]
 
-with open(input_file, "r", encoding="utf-8") as f:
+with open(search_results, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 for item in data:
@@ -60,6 +86,7 @@ for item in data:
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4, ensure_ascii=False)
 
-print(f"✅ Extracted all copyright and photographer info → {output_file} with {len(data)} items")
+# print(f"✅ Extracted all copyright and photographer info → {output_file} with {len(data)} items")
+
 
 
