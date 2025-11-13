@@ -122,9 +122,6 @@ for item in with_photographer:
     if not found:
         non_female_by_honorific.append(item)
 
-with open("data/female_by_honorific.json", "w", encoding="utf-8") as f:
-    json.dump(female_by_honorific, f, indent=4, ensure_ascii=False)
-
 
 # checks for first name that appears 
 for item in non_female_by_honorific:
@@ -144,9 +141,6 @@ for item in non_female_by_honorific:
     if not found: 
         undefined_by_name.append(item)
 
-with open("data/female_by_name.json", "w", encoding="utf-8") as f:
-    json.dump(female_by_name, f, indent=4, ensure_ascii=False)
-
 
 female_honorific_name = female_by_honorific.copy()
 
@@ -164,6 +158,5 @@ for item in with_photographer:
 with open("data/undefined_list.json", "w", encoding="utf-8") as f:
     json.dump(undefined_by_name_honorifics, f, indent=4, ensure_ascii=False)
 
-print(f"items in undefined: {len(undefined_by_name_honorifics)}")
+print(f"Number of items with female names: {len(female_honorific_name)}")
 
-# DELETE female by honorific and female by name
