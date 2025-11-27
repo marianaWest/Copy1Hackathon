@@ -80,7 +80,8 @@ for item in data:
                     found = re.sub(r"\s+", " ", found).rstrip(" ,.")
                     existing = item.get(key, "")
                     if existing:
-                        item[f"{key} ({field_name})"] = f"{existing}; {found}"
+                        if found not in existing.split("; "):
+                            item[key] = f"{existing}; {found}"
                     else:
                         item[key] = found
 
@@ -159,4 +160,6 @@ with open("data/undefined_list.json", "w", encoding="utf-8") as f:
     json.dump(undefined_by_name_honorifics, f, indent=4, ensure_ascii=False)
 
 print(f"Number of items with female names: {len(female_honorific_name)}")
+
+
 
