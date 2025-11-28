@@ -24,4 +24,6 @@ After discarding items without reference to a photographer or copyright holder, 
 
 With a much smaller list, I was able to review it manually. The gender detector sometimes made mistakes (for example, the Marion Company appears numerous times). I then tabulated in a spreadsheet how many times a woman was mentioned, either as a photographer or copyright author, as a copyright owner, or both. I ended up with a list of 71 names, although some cases there might be a different spelling of the same name (f.ex., Guavier and Gravier, Jane Maria Bowkett and Jane Marie Borrkett).
 
-My goal with this project was not to find every single mention of a woman in the National Archives collection, but to expand our knowledge of women practicing photography as a starting point for further research. The only names I recognized were Julia Margaret Cameron and Alice Hughes, but people who specialize in this context will likely identify more familiar names. Nevertheless, I suspect some of them are still not widely known.
+My goal with this project was not to find every single mention of a woman in the National Archives collection, but to expand our knowledge of women practicing photography as a starting point for further research. The only names I recognized were Julia Margaret Cameron and Alice Hughes, but people who specialize in this context will likely identify more familiar names. Nevertheless, I suspect some of them are still not widely known. 
+
+You can find the final list of names in the data folder. 
