@@ -2,15 +2,15 @@
 
 ## The Copyright Collection at The National Archives of the UK
 
-I am an art historian who specializes in the history of photography, particularly in the early 20th century. As I was studying for my PhD, I very rarely came across women practicing photography during the medium's early years, except for some well-known names such as Julia Margaret Cameron and Anna Atkins. However, while reading newspapers and journals of the time, I realized that women were much more involved in photography than I was led to believe. I noticed that women not only worked as photographers but also owned or managed studios, edited and published journals, and organized clubs and events on photography. 
+I am an art historian who specializes in the history of photography, and I'm particularly interested in the early 20th century. As I was studying for my PhD, I very rarely came across women practicing photography during the medium's early years, except for some well-known names such as Julia Margaret Cameron and Anna Atkins. However, while reading newspapers and journals of the time, I realized that women were much more involved in photography than I was led to believe. I noticed that women not only worked as photographers but also owned or managed studios, edited and published journals, and organized clubs and events on photography.
 
 Still, I usually find it difficult to locate women in photography as I search existing online databases. For example, these are the first results returned when searching the Europeana database for “female photographer”:
 
 ![Europeana search result](Assets/europeana_search_female_photographer.png)
-Example of the search results for "female photographer" in Europeana. 
+Example of the search results for "female photographer" in Europeana.
 
 I knew that looking for similar terms would probably lead me to frustration. I needed a different strategy. One clue that I had from my readings was that during the turn of the 20th century women were often hired to made portraits of children.
-I read a post on LinkedIn about the copyright records now at The National Archives of the UK. Starting in 1862, the Fine Arts Copyright Act required a system of registration of photographs and other visual materials, a system that lasted about 50 years. This collection is extremely useful for my research interest, as the images were submitted with forms that specify the copyright owner and copyright author, meaning that we can find information not only on photographers but also on studio owners. 
+I read a post on LinkedIn about the copyright records now at The National Archives of the UK. Starting in 1862, the Fine Arts Copyright Act required a system of registration of photographs and other visual materials, a system that lasted about 50 years. This collection is extremely useful for my research interest, as the images were submitted with forms that specify the copyright owner and copyright author, meaning that we can find information not only on photographers but also on studio owners.
 
 The team at the Archives created a GitHub repository that explains more about the collection, and provides a roadmap for anyone who wants to start digging it (https://github.com/rae-drt/Copy1Hackathon).
 
